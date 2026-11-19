@@ -273,7 +273,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5653158055126306,
+        "zoomFactor": 0.9934433498259571,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -290,8 +290,8 @@
           "name": "player",
           "persistentUuid": "f3be3cf6-a087-4494-9e67-07a9a294a2cd",
           "width": 0,
-          "x": 329,
-          "y": 397,
+          "x": 108,
+          "y": 208,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -341,15 +341,27 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyFromTextPressed"
+                "inverted": true,
+                "value": "SceneJustBegins"
               },
               "parameters": [
-                "",
-                "\"Space\""
+                ""
               ]
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "SetXY"
+              },
+              "parameters": [
+                "line",
+                "=",
+                "player.CenterX()",
+                "=",
+                "player.CenterY()"
+              ]
+            },
             {
               "type": {
                 "value": "PrimitiveDrawing::LineV2"
@@ -360,6 +372,77 @@
                 "hook.Y()",
                 "player.X()",
                 "player.X()",
+                "10"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Space\""
+              ]
+            }
+          ],
+          "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"w\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetXY"
+              },
+              "parameters": [
+                "player",
+                "+",
+                "0",
+                "+",
+                "-10"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"s\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetXY"
+              },
+              "parameters": [
+                "player",
+                "+",
+                "0",
+                "+",
                 "10"
               ]
             }
