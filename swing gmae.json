@@ -206,6 +206,31 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "line",
+      "persistentUuid": "32af0cdd-386f-458a-ab7d-f36de446b6d2",
+      "type": "PrimitiveDrawing::Drawer",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "fillOpacity": 255,
+      "outlineSize": 1,
+      "outlineOpacity": 255,
+      "absoluteCoordinates": false,
+      "clearBetweenFrames": true,
+      "antialiasing": "none",
+      "fillColor": {
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "outlineColor": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -216,6 +241,9 @@
       },
       {
         "objectName": "hook"
+      },
+      {
+        "objectName": "line"
       }
     ]
   },
@@ -285,13 +313,59 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "line",
+          "persistentUuid": "752b79a7-23df-498b-a2bd-14cfa456dce9",
+          "width": 0,
+          "x": 240,
+          "y": 244,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [],
       "objectsFolderStructure": {
         "folderName": "__ROOT"
       },
-      "events": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Space\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PrimitiveDrawing::LineV2"
+              },
+              "parameters": [
+                "line",
+                "hook.X()",
+                "hook.Y()",
+                "player.X()",
+                "player.X()",
+                "10"
+              ]
+            }
+          ]
+        }
+      ],
       "layers": [
         {
           "ambientLightColorB": 200,
