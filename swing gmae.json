@@ -252,7 +252,41 @@
       },
       "objectsGroups": [],
       "variables": [],
-      "instances": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "player",
+          "persistentUuid": "f3be3cf6-a087-4494-9e67-07a9a294a2cd",
+          "width": 0,
+          "x": 329,
+          "y": 397,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 3,
+          "height": 191,
+          "keepRatio": true,
+          "layer": "",
+          "name": "hook",
+          "persistentUuid": "a6bdf43d-555d-400d-a2aa-842037a9fab9",
+          "width": 191,
+          "x": 520,
+          "y": -5,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
       "objects": [],
       "objectsFolderStructure": {
         "folderName": "__ROOT"
